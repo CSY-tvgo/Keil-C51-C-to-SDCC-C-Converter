@@ -286,7 +286,8 @@
 
             // 实际转换
             try {
-                var convert_result = "// 转换后的代码如下\n//\n////////////////////////////////////////////////////////////////\n#include <compiler.h>    // 请在本网页下载此头文件(https://csy-tvgo.github.io/Keil-C51-C-to-SDCC-C-Converter)\n"
+                var thisurl = window.location.href
+                var convert_result = "// 转换后的代码如下\n//\n////////////////////////////////////////////////////////////////\n#include <compiler.h>    // 请在本网页下载此头文件(" + thisurl + ")\n"
                 var code_keilc51_in_list = code_keilc51.split('\n')
                 for (var i = 0; i < code_keilc51_in_list.length; i++) {
                     var line = code_keilc51_in_list[i]
