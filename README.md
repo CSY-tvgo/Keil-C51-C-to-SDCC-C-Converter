@@ -6,7 +6,7 @@
 Convert your Keil C51 C code to SDCC C code in a webpage.  
   
 使用方法 (中文版): 点击 [此处](https://CSY-tvgo.github.io/Keil-C51-C-to-SDCC-C-Converter/) 打开中文版网页，然后根据页面提示进行操作。  
-Usage (English Version): ==Comming Soon==  
+Usage (English Version): Click [here](https://CSY-tvgo.github.io/Keil-C51-C-to-SDCC-C-Converter/index_en.html) to open the website, then you can follow the tips to convert your code.  
   
 ## Features  
 - [x] In-browser code editor based on [Code Mirror](https://github.com/codemirror/CodeMirror/)  

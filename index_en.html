@@ -144,15 +144,15 @@
 
         <div class="code-window-keilc51">
             <header class="code-header">
-                Keil C51 代码 &nbsp;
-                <button type="button" onclick="editor_keilc51.setValue('')">清空</button>
+                Keil C51 Code &nbsp;
+                <button type="button" onclick="editor_keilc51.setValue('')">Clear</button>
             </header>
             <textarea class="code-editor-keilc51" id="editor-keilc51">
             </textarea>
         </div>
         <div class="code-window-header">
             <header class="code-header">
-                单片机的头文件 &nbsp;
+                Header File of MCU &nbsp;
                 <select id="headerMode" onchange="editor_header_changeMode()">
                     <option value="CH549">CH549.H</option>
                     <option value="Others">Others</option>
@@ -161,15 +161,15 @@
             <textarea class="code-editor-header" id="editor-header">
             </textarea>
             <a class="convert-button" href="javascript:execute_convert()">
-                <br />==== 转换 ===><br /><br />
+                <br />==== Convert ===><br /><br />
             </a>
         </div>
         <div class="code-window-sdcc">
             <header class="code-header">
-                转换后的 SDCC 代码 &nbsp;
-                <button type="button" onclick="copyResult()">复制</button> &nbsp;
+                Converted SDCC Code &nbsp;
+                <button type="button" onclick="copyResult()">Copy</button> &nbsp;
                 <a href="./assets/compiler.h" download="compiler.h" target="_blank">
-                    <small>下载 Compiler.h</small>
+                    <small>Download Compiler.h</small>
                 </a>
             </header>
             <textarea class="code-editor-sdcc" id="editor-sdcc">
@@ -199,7 +199,7 @@
             indentUnit: 4,
         })
         editor_keilc51.setSize('auto', '32rem')
-        editor_keilc51.setOption("value", "// 请把 Keil C51 代码复制至此处\n// 如果你想转换头文件，也可将头文件的代码复制至此处")
+        editor_keilc51.setOption("value", "// Please paste your Keil C51 code here.\n// If you'd like to convert header file, you can also paste it here.")
 
         var editor_header = CodeMirror.fromTextArea(document.getElementById("editor-header"), {
             mode: "text/x-csrc",
@@ -224,7 +224,7 @@
             indentUnit: 4,
         })
         editor_sdcc.setSize('auto', '32rem')
-        editor_sdcc.setValue("// 请先在左侧两栏中准备好代码\n// 点击转换按钮后，这里会显示转换后的代码")
+        editor_sdcc.setValue("// Please prepare your code in the left two boxes first.\n// After clicking the convert button, you can see the converted code here.")
 
 
         editor_keilc51.on("scroll", function () {
@@ -247,7 +247,7 @@
                 editor_header.setOption("readOnly", true)
             }
             else if (selected == "Others") {
-                editor_header.setValue("// 请将头文件的代码复制至此代码框内")
+                editor_header.setValue("// Please paste your header file code here.")
                 editor_header.setOption("readOnly", false)
             }
         }
@@ -294,15 +294,15 @@
                 var reg_bits = parsed[1]
             }
             catch (err) {
-                console.log("因头文件格式问题转换失败，原因为：")
+                console.log("Convert failed because of the wrong format of the header file, the reason(s): ")
                 console.log(err)
-                return "转换失败，头文件格式不太正确！请使用格式正确的 Keil C51 版本的头文件。"
+                return "Convert failed because of the wrong format of the header file, please use the correct Keil-C51-format code."
             }
 
             // 实际转换
             try {
                 var thisurl = window.location.href
-                var convert_result = "// 转换后的代码如下\n//\n////////////////////////////////////////////////////////////////\n#include <compiler.h>    // 请在本网页下载此头文件(" + thisurl + ")\n"
+                var convert_result = "// Converted code as follows\n//\n////////////////////////////////////////////////////////////////\n#include <compiler.h>    // Please download this header file on this website (" + thisurl + ").\n"
                 var code_keilc51_in_list = code_keilc51.split('\n')
                 for (var i = 0; i < code_keilc51_in_list.length; i++) {
                     var line = code_keilc51_in_list[i]
@@ -373,9 +373,9 @@
                 }
             }
             catch (err) {
-                console.log("因 Keil C51 代码格式问题转换失败，原因为：")
+                console.log("Convert failed because of the wrong format of the Keil C51 Code, the reason(s): ")
                 console.log(err)
-                return "转换失败， Keil C51 代码格式不太正确！请使用格式正确的代码。"
+                return "Convert failed because of the wrong format of the Keil C51 Code, please use the correct Keil-C51-format code."
             }
 
             return convert_result
@@ -385,7 +385,7 @@
             var code_keilc51 = editor_keilc51.getValue()
             var code_header = editor_header.getValue()
 
-            var notice = "//\n// 已读取，请在最右侧栏查看转换结果\n//\n////////////////////////////////////////////////////////////////\n"
+            var notice = "//\n// Loaded. Please see the convert result in the rightmost box.\n//\n////////////////////////////////////////////////////////////////\n"
             if (code_keilc51.indexOf(notice) != 0) {
                 editor_keilc51.setValue(notice + code_keilc51)
             }
@@ -408,7 +408,7 @@
             el.select()
             document.execCommand('copy')
             document.body.removeChild(el)
-            alert("\n你点击了复制按钮！\n\n（有的浏览器能复制成功，有的不能）")
+            alert("\nYou click the \"Copy\" button!\n\n(Some browser can copy successfully, but some can't.")
         }
 
     </script>
