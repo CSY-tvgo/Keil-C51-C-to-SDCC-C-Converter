@@ -135,7 +135,9 @@
         </div>
         <div>
             <h3>
-                [ <a href="./index.html">中文</a> | <a href="./index_en.html">English</a> ]
+                [ <a href="./index.html">中文</a> | <a href="./index_en.html">
+                    <font color="#4C6E85">English</font>
+                </a> ]
             </h3>
         </div>
     </div>
@@ -224,7 +226,7 @@
             indentUnit: 4,
         })
         editor_sdcc.setSize('auto', '32rem')
-        editor_sdcc.setValue("// Please prepare your code in the left two boxes first.\n// After clicking the convert button, you can see the converted code here.")
+        editor_sdcc.setValue("// Please fill your code into the two boxes on the left first.\n// After clicking the \"convert\" button, you can see the converted code here.")
 
 
         editor_keilc51.on("scroll", function () {
@@ -408,7 +410,7 @@
             el.select()
             document.execCommand('copy')
             document.body.removeChild(el)
-            alert("\nYou click the \"Copy\" button!\n\n(Some browser can copy successfully, but some can't.")
+            alert("\nYou clicked the \"Copy\" button!\n\n(Some browser can copy successfully, but some others cannot.)")
         }
 
     </script>
