@@ -16,6 +16,6 @@ Usage (English Version): Click [here](https://CSY-tvgo.github.io/Keil-C51-C-to-S
 - [ ] *Others...*  
   
 ## More Information  
-这个网页还是 **以 CH549 为例的 51 教程** 的配套材料，点击查看 [该教程的主索引](https://verimake.com/topics/255)。另外，欢迎在 [VeriMake 论坛](https://verimake.com/) 中参与讨论，也欢迎在哔哩哔哩上关注 [VeriMake](https://space.bilibili.com/356383684)。  
-This in-browser tool is also made for **8051 Tutorial using CH549 as example**. Click here to see [the main index of this tutorial](https://verimake.com/topics/255). Besides, welcome to visit [VeriMake BBS](https://verimake.com/) to participate in discussion, and follow [VeriMake](https://space.bilibili.com/356383684) channel on bilibili to watch our interesting technical videos *(in Chinese)*.  
+这个网页还是 **以 CH549 为例的 51 教程** 的配套材料，点击查看 [该教程的主索引](https://verimake.com/d/19)。另外，欢迎在 [VeriMake 论坛](https://verimake.com/) 中参与讨论，也欢迎在哔哩哔哩上关注 [VeriMake](https://space.bilibili.com/356383684)。  
+This in-browser tool is also made for **8051 Tutorial using CH549 as example**. Click to see [the main index of this tutorial](https://verimake.com/d/19). Besides, welcome to visit [VeriMake BBS](https://verimake.com/) to participate in discussion, and follow VeriMake channel [on bilibili](https://space.bilibili.com/356383684) *(in Chinese)* or [on YouTube](https://www.youtube.com/channel/UCQ9x0GaszHrrDvbNZ2IKMWw) *(in English)* to watch other interesting technical videos.  
   
