@@ -311,7 +311,7 @@
                     var comment_index = line.indexOf("//")
 
                     // 替换关键字
-                    var keywords = ["bit", "data", "idata", "xdata", "pdata", "code"]
+                    var keywords = ["bit", "data", "idata", "xdata", "pdata", "code", "interrupt", "using"]
                     for (var j = 0; j < keywords.length; j++) {
                         var keyword_index = line.indexOf(keywords[j])
                         if (keyword_index >= 0) {
